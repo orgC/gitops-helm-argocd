@@ -5,10 +5,10 @@ kind: ServiceAccount
 metadata:
   name: adventure1-myapp
   labels:
-    helm.sh/chart: myapp-0.1.0
+    helm.sh/chart: myapp-0.1.1
     app.kubernetes.io/name: myapp
     app.kubernetes.io/instance: adventure1
-    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/version: "1.16.1"
     app.kubernetes.io/managed-by: Helm
 ---
 # Source: myapp/templates/service.yaml
@@ -17,10 +17,10 @@ kind: Service
 metadata:
   name: adventure1-myapp
   labels:
-    helm.sh/chart: myapp-0.1.0
+    helm.sh/chart: myapp-0.1.1
     app.kubernetes.io/name: myapp
     app.kubernetes.io/instance: adventure1
-    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/version: "1.16.1"
     app.kubernetes.io/managed-by: Helm
 spec:
   type: ClusterIP
@@ -39,10 +39,10 @@ kind: Deployment
 metadata:
   name: adventure1-myapp
   labels:
-    helm.sh/chart: myapp-0.1.0
+    helm.sh/chart: myapp-0.1.1
     app.kubernetes.io/name: myapp
     app.kubernetes.io/instance: adventure1
-    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/version: "1.16.1"
     app.kubernetes.io/managed-by: Helm
 spec:
   replicas: 1
@@ -63,7 +63,7 @@ spec:
         - name: myapp
           securityContext:
             {}
-          image: "nginx:1.16.0"
+          image: "nginx:1.16.1"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
